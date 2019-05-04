@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>World Happiness Report</title>
+    <script type="text/javascript" src="d3.js">
+  </script>
+  </head>
+
+  <body>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Heebo');
+*{
+  font-family: 'Heebo', sans-serif;}
+
+#legend text {
+  font-size: 0.9em;
+  color: #333;
+  font-weight: 400;
+}
+
+.map{
+  margin-left: 100px;
+}
+
+
+.pan rect {
+  fill: black;
+  opacity: 0.2;
+}
+
+.pan text {
+  fill: black;
+  font-size: 18px;
+  text-anchor: middle;
+}
+
+.pan:hover rect,
+.pan:hover text {
+  fill: blue;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 7px;
+  font-size: 0.9em;
+  pointer-events: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  -moz-box-shadow:    3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow:         3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip p {
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip table {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+.tooltipOther {
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 30px;
+  padding: 7px;
+  font-size: 0.9em;
+  pointer-events: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  -moz-box-shadow:    3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow:         3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.tooltipOther p {
+  margin: 0;
+  padding: 0;
+}
+
+.tooltipOther table {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+h1, h2 {
+  line-height: 1em;
+  font-size: 1.75em;
+  font-weight: 900;
+  color: #000;
+  margin-top: 100px;
+}
+
+h3.year {
+  margin: 10px 0px 0px 0px;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+div.slider{
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 100px;
+}
+    </style>
+
+<h1></h1>
+
+  <div class="slider">
+    <h3 class="year"></h3>
+  </div>
+	<svg class="map"></svg>
+
+<script type = "text/javascript" src="map.js">
+  </script>
+
+  </body>
+</html>
